@@ -15,7 +15,7 @@ jobs:
           run: |
             $json = '{"event_type":"trigger-from-repo-source"}'
             curl -X POST `
-              -H "Authorization: token ${{ secrets.PAT_TRIG }}" `
+              -H "Authorization: token ${{ secrets.PAT_TRIGGER }}" `
               -H "Accept: application/vnd.github+json" `
               -H "Content-Type: application/json" `
               https://api.github.com/repos/AnhAutomationTester/SeleniumBDDFramework/dispatches `
