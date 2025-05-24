@@ -18,5 +18,5 @@ jobs:
               -H "Authorization: token ${{ secrets.PAT_TRIGGER }}" `
               -H "Accept: application/vnd.github+json" `
               -H "Content-Type: application/json" `
-              https://api.github.com/repos/AnhAutomationTester/SeleniumBDDFramework/dispatches `
+              https://github.com/AnhAutomationTester/SeleniumBDDFramework `
               -d $json
