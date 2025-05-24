@@ -10,7 +10,13 @@ jobs:
   trigger:
     runs-on: windows-latest  # ✅ Sửa "window-latest" thành "windows-latest"
     steps:
-      - name: Trigger repo-auto workflow
-        run: |
-          curl -X POST -H "Authorization: token ${{ secrets.PAT_TRIGGER }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/AnhAutomationTester/SeleniumBDDFramework/dispatches -d "{\"event_type\":\"trigger-from-repo-source\"}"
-
+        - name: Trigger repo-auto workflow
+          shell: pwsh
+          run: |
+            $json = '{"event_type":"trigger-from-repo-source"}'
+            curl -X POST `
+              -H "Authorization: token ${{ secrets.PAT_TRIGGER }}" `
+              -H "Accept: application/vnd.github+json" `
+              -H "Content-Type: application/json" `
+              https://api.github.com/repos/AnhAutomationTester/SeleniumBDDFramework/dispatches `
+              -d $json
