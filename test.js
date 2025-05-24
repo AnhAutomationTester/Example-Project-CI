@@ -28,5 +28,3 @@ function createGitHubRepo(repoName, isPrivate = false) {
     return repo;
 }
 
-// Gọi thử
-createGitHubRepo("my-demo-repo", false);
