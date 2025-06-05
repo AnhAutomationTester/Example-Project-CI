@@ -7,11 +7,12 @@ jobs:
   run-autify:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Autify CLI
-        run: npm install -g @autify/cli
+      - name: Setup Autify CLI
+        uses: autifyhq/actions-setup-cli@v2
 
       - name: Authenticate Autify
         run: autify login --token ${{ secrets.AUTIFY_API_KEY }}
 
-      - name: Run test
+      - name: Run Autify Scenario
         run: autify web tests run --scenario-id=369393
+
