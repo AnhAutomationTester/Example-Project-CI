@@ -10,9 +10,7 @@ jobs:
       - name: Setup Autify CLI
         uses: autifyhq/actions-setup-cli@v2
 
-      - name: Authenticate Autify
-        run: autify login --token ${{ secrets.AUTIFY_API_KEY }}
-
       - name: Run Autify Scenario
+        env:
+          AUTIFY_API_KEY: ${{ secrets.AUTIFY_API_KEY }}
         run: autify web tests run --scenario-id=369393
-
