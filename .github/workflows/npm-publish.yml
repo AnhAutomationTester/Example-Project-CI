@@ -13,5 +13,5 @@ jobs:
           TEST_PLAN_ID: "953090"
         run: |
           echo "Triggering Autify test plan..."
-          curl -X POST "https://app.autify.com/api/v1/test_plans/${TEST_PLAN_ID}/run" \
+          curl -X POST "https://app.autify.com/api/v1/test_plans/${TEST_PLAN_ID}/runs" \
             -H "Authorization: Bearer $AUTIFY_API_KEY"
