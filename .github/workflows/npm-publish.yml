@@ -13,4 +13,4 @@ jobs:
       - name: Run Autify Scenario
         env:
           AUTIFY_API_KEY: ${{ secrets.AUTIFY_API_KEY }}
-        run: autify web tests run --scenario-id=369393
+        run: autify web test run --scenario-id=369393
