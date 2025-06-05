@@ -14,4 +14,4 @@ jobs:
         run: autify login --token ${{ secrets.AUTIFY_API_KEY }}
 
       - name: Run test
-        run: autify web tests run --scenario-id=your_scenario_id
+        run: autify web tests run --scenario-id=369393
