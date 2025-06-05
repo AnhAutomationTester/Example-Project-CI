@@ -12,6 +12,6 @@ jobs:
 
       - name: Run Autify Scenario
         env:
-          AUTIFY_API_KEY: ${{ secrets.AUTIFY_WEB_ACCESS_TOKEN }}
+          AUTIFY_WEB_ACCESS_TOKEN: ${{ secrets.AUTIFY_WEB_ACCESS_TOKEN }}
         run: autify web test run https://app.autify.com/projects/14749/test_plans/953090
 
